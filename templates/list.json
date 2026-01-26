@@ -893,6 +893,20 @@
     ]
   },
   {
+    "slug": "context-engine",
+    "logo": null,
+    "name": "Context Engine",
+    "description": "Context Engine is an open-core, self-improving code search and MCP (Model Context Protocol) platform.\nIt helps developers search and navigate complex codebases using advanced indexing and vector search.\nThe platform includes specialized components for memory, indexing, and file uploads, all powered by Qdrant.\n",
+    "tags": [
+      "Code Search",
+      "MCP",
+      "AI",
+      "Vector Database",
+      "Knowledge Graph",
+      "Developer Tools"
+    ]
+  },
+  {
     "slug": "convertx",
     "logo": "logo.png",
     "name": "Convertx",
@@ -6322,6 +6336,19 @@
       "Load Balancer",
       "Docker",
       "Security"
+    ]
+  },
+  {
+    "slug": "zulip",
+    "logo": "logo.png",
+    "name": "Zulip",
+    "description": "Zulip is a powerful team collaboration platform that combines the immediacy of chat with the organization of email. It features topic-based threading that makes it easy to catch up on conversations that happened while you were away. Zulip is designed for both live and asynchronous conversations, with advanced features like message formatting, file sharing, emoji reactions, and integrations with hundreds of tools. It's perfect for distributed teams, open source projects, and organizations that need organized, searchable communication. Zulip is open source and can be self-hosted for complete control over your data.",
+    "tags": [
+      "Chat",
+      "Communication",
+      "Collaboration",
+      "Team",
+      "Open Source"
     ]
   }
 ]

@@ -1,0 +1,99 @@
+name: Context Engine
+description: |
+  Context Engine is an open-core, self-improving code search and MCP (Model Context Protocol) platform.
+  It helps developers search and navigate complex codebases using advanced indexing and vector search.
+  The platform includes specialized components for memory, indexing, and file uploads, all powered by Qdrant.
+instructions: |
+  This template deploys the full Context Engine stack including the Indexer, Memory service, Upload service, and Qdrant database.
+  - Memory SSE: http://$(PRIMARY_DOMAIN):8000/sse
+  - Indexer SSE: http://$(PRIMARY_DOMAIN):8001/sse
+  - Qdrant UI: http://$(PRIMARY_DOMAIN):6333/dashboard
+  Ensure you have your LLM API keys ready to configure the indexers.
+changeLog:
+  - date: 2025-02-12
+    description: Initial release
+links:
+  - label: Website
+    url: https://context-engine.ai/
+  - label: Github
+    url: https://github.com/context-engine/context-engine
+contributors:
+  - name: Livio Gama
+    url: https://github.com/LivioGama
+schema:
+  type: object
+  required:
+    - projectName
+    - memoryServiceName
+    - indexerServiceName
+    - uploadServiceName
+    - qdrantServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    memoryServiceName:
+      type: string
+      title: Memory Service Name
+      default: ce-memory
+    memoryServiceImage:
+      type: string
+      title: Memory Service Image
+      default: ghcr.io/context-engine/memory:latest
+    indexerServiceName:
+      type: string
+      title: Indexer Service Name
+      default: ce-indexer
+    indexerServiceImage:
+      type: string
+      title: Indexer Service Image
+      default: ghcr.io/context-engine/indexer:latest
+    uploadServiceName:
+      type: string
+      title: Upload Service Name
+      default: ce-upload
+    uploadServiceImage:
+      type: string
+      title: Upload Service Image
+      default: ghcr.io/context-engine/upload-service:latest
+    qdrantServiceName:
+      type: string
+      title: Qdrant Service Name
+      default: ce-qdrant
+    qdrantServiceImage:
+      type: string
+      title: Qdrant Service Image
+      default: qdrant/qdrant:latest
+benefits:
+  - title: Self-Improving Code Search
+    description: |
+      Context Engine learns from your queries and codebase structure to provide
+      increasingly accurate search results over time.
+  - title: MCP Integration
+    description: |
+      Full support for Model Context Protocol (MCP), allowing AI agents like
+      Claude or Zed to interact directly with your codebase context.
+  - title: Multi-Service Architecture
+    description: |
+      Decoupled services for indexing, memory, and storage ensure high
+      performance and reliability during heavy code analysis.
+features:
+  - title: Vector Search with Qdrant
+    description: |
+      Uses state-of-the-art vector embeddings to understand the semantic meaning
+      of your code, not just keyword matching.
+  - title: Real-time Indexing
+    description: |
+      Automatically updates its index as your code changes, ensuring the AI
+      always has the latest context.
+  - title: Cross-Repo Analysis
+    description: |
+      Index and search across multiple repositories to find relationships and
+      patterns across your entire organization.
+tags:
+  - Code Search
+  - MCP
+  - AI
+  - Vector Database
+  - Knowledge Graph
+  - Developer Tools
