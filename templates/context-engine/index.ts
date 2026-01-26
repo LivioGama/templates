@@ -36,7 +36,8 @@ export function generate(input: Input): Output {
       serviceName: input.memoryServiceName,
       source: {
         type: "image",
-        image: input.memoryServiceImage || "ghcr.io/context-engine/memory:latest",
+        image:
+          input.memoryServiceImage || "ghcr.io/context-engine/memory:latest",
       },
       env: [
         `QDRANT_HOST=${input.qdrantServiceName}`,
@@ -59,7 +60,8 @@ export function generate(input: Input): Output {
       serviceName: input.indexerServiceName,
       source: {
         type: "image",
-        image: input.indexerServiceImage || "ghcr.io/context-engine/indexer:latest",
+        image:
+          input.indexerServiceImage || "ghcr.io/context-engine/indexer:latest",
       },
       env: [
         `QDRANT_HOST=${input.qdrantServiceName}`,
@@ -84,7 +86,9 @@ export function generate(input: Input): Output {
       serviceName: input.uploadServiceName,
       source: {
         type: "image",
-        image: input.uploadServiceImage || "ghcr.io/context-engine/upload-service:latest",
+        image:
+          input.uploadServiceImage ||
+          "ghcr.io/context-engine/upload-service:latest",
       },
       env: [
         `INDEXER_HOST=${input.indexerServiceName}`,
